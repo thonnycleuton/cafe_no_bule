@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="block">
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="signup-panel">
+                <p class="welcome">Cadastro novo Email</p>
+                <div class="row collapse">
+                    <div class="small-2  columns">
+                        <form method="post" action="">
+                          <div class="row collapse">
+                            <div class="small-2  columns">
+                            {% csrf_token %}
+                            {{ form }}
+                            </div>
+                          </div>
+                            <button class="button postfix" type="submit">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+          </div>
+        </div>
+       </div>
+    </section>
+{% endblock %}
